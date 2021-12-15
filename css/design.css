@@ -1,0 +1,232 @@
+/* basic layout */
+
+/* typography */
+html {
+    font-size: 20px;
+}
+@media only screen and (max-width:500px) {
+    html,body {
+        font-size: 16px;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Helvetica, Arial, sans-serif;
+}
+/* header */
+header {
+    margin-bottom: 2rem;
+}
+header h1, header h1 a {
+    line-height: 1rem;
+    font-size: 1.5rem;
+    color: __text_header__;
+    text-decoration: none;
+}
+
+header span.tagline {
+    color: __text_sub__;
+    font-size: 1rem;
+}
+
+header div#tools {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 70fr 15fr 15fr;
+    /*grid-template-columns: 1fr;*/
+    grid-template-areas: "search sitemenu usermenu";
+    /*grid-template-areas: "search";*/
+}
+
+@media only screen and (max-width:780px) {
+    header div#tools {
+        grid-template-columns: 50fr 50fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "search search" "sitemenu usermenu";
+    }
+}
+header div#searchtools {
+    grid-area: search;
+    padding-right: 1rem;
+}
+@media only screen and (max-width:780px) {
+    header div#searchtools {
+        padding-right: 0;
+    }
+}
+header div#sitemenu {
+    grid-area: sitemenu;
+}
+header div#usermenu {
+    grid-area: usermenu;
+    text-align: right;
+}
+
+header svg {
+    width: 1rem;
+    fill: __text_header__;
+}
+
+header div#sitemenu ul li,
+header div#usermenu ul li {
+    list-style: none;
+    display: inline-block;
+    margin-top: 0.25rem;
+}
+header div#sitemenu ul li {
+    margin-right: 0.75rem;
+}
+header div#usermenu ul li {
+    margin-left: 0.75rem;
+}
+
+header div#sitemenu ul li span,
+header div#usermenu ul li span {
+    display: none;
+}
+
+header div#searchtools form input {
+    border: none;
+    border-bottom: 1px solid __border__;
+    width: 100%;
+    font-size: 1rem;
+}
+
+header div#searchtools form button {
+    display: none;
+}
+
+/* TOC */
+div#dw__toc {
+    font-size: 0.8rem;
+    width: 50%;
+    border-top: 1px solid __border__;
+    border-bottom: 1px solid __border__;
+    margin: 1rem 0 1rem 0;
+}
+@media only screen and (max-width:780px) {
+    div#dw__toc {
+        width: 100%;
+    }
+}
+div#dw__toc h3 {
+    margin: 0;
+}
+div#dw__toc h3 span {
+    margin-right: 0.5rem;
+}
+div#dw__toc > div {
+    padding-bottom: 0.5rem;
+}
+div#dw__toc ul {
+    margin-left: 0;
+}
+
+/* main */
+main h1:first-child {
+    font-size: 3rem;
+    text-decoration: underline;
+    line-height: 1;
+    margin: 0;
+}
+
+main div.pageID {
+    text-align: left;
+    color: __text_sub__;
+    margin-bottom: 2rem;
+}
+main div.docInfo {
+    color: __text_sub__;
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+}
+
+main div.footnotes > .fn > div {
+    display: inline-block;
+}
+
+main li {
+    margin-left: 1.5rem;
+}
+
+/* edit Form */
+div.editBox textarea,
+div.editBox fieldset {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 0.8rem;
+}
+/* footer */
+footer {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+footer div#tools {
+    display:grid;
+    grid-template-columns: 50fr 50fr;
+    grid-template-areas: "userinfo pagemenu";
+}
+@media only screen and (max-width:780px) {
+    footer div#tools {
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "userinfo userinfo" "pagemenu pagemenu";
+    }
+}
+footer div#searchtools {
+    grid-area: search;
+    padding-right: 1rem;
+}
+@media only screen and (max-width:780px) {
+    footer div#searchtools {
+        padding-right: 0;
+    }
+}
+footer div#userinfo {
+    grid-area: userinfo;
+    font-size: 0.8rem;
+    color: __text_footer__;
+}
+@media only screen and (max-width:780px) {
+    footer div#userinfo {
+        text-align: right;
+    }
+}
+
+footer div#pagemenu {
+    grid-area: pagemenu;
+    text-align: right;
+}
+
+footer svg {
+    width: 1rem;
+    fill: __text_footer__;
+}
+
+footer div#sitemenu ul li,
+footer div#pagemenu ul li {
+    list-style: none;
+    display: inline-block;
+    margin-top: 0.25rem;
+}
+footer div#sitemenu ul li {
+    margin-right: 0.75rem;
+}
+footer div#pagemenu ul li {
+    margin-left: 0.75rem;
+}
+
+footer div#sitemenu ul li span,
+footer div#pagemenu ul li span {
+    display: none;
+}
+
+footer div#searchtools form input {
+    border: none;
+    border-bottom: 1px solid __border__;
+    width: 100%;
+    font-size: 1rem;
+}
+
+footer div#searchtools form button {
+    display: none;
+}
