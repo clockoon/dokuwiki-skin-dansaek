@@ -37,9 +37,6 @@
                     ?>
                 </h1>
                 <span class="tagline"><?php if ($conf['tagline']): echo $conf['tagline']; endif ?>&#8205;</span>
-                <?php if ($conf['tagline']): ?>
-                    <span class="tagline"><?php echo $conf['tagline']; ?></span>
-                <?php endif ?>
                 <!-- TOOLS -->
                 <div id="tools">
                     <!-- SEARCH TOOLS -->

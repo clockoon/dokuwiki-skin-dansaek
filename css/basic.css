@@ -100,12 +100,12 @@ main {
 /* margin, padding */
 div.container {
     max-width: 780px;
-    padding: 1rem 2rem 0 2rem;
+    padding: 2rem 2rem 0 2rem;
 }
 @media only screen and (max-width:780px) {
     div.container {
         width: 100%;
-        padding: 1rem 1rem 0 1rem;
+        padding: 2rem 1rem 0 1rem;
         }
 }
 p {

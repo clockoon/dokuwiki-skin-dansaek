@@ -91,7 +91,22 @@ header div#searchtools form input {
     width: 100%;
     font-size: 1rem;
 }
-
+header div#searchtools form div#qsearch__out {
+    display: inline-block;
+    width: calc(780px * 0.3);
+    border: 1px solid #ddd;
+    margin-left: 0.5rem;
+    padding: 0.5rem;
+    font-size: 0.75rem;
+}
+@media only screen and (max-width:780px) {
+    header div#searchtools form div#qsearch__out {
+        display: block;
+        width: calc(100vw - 2rem);
+        margin-left: 0;
+        font-size: 0.8rem;
+    }
+}
 header div#searchtools form button {
     display: none;
 }
@@ -142,11 +157,33 @@ main div.docInfo {
 }
 
 main div.footnotes > .fn > div {
-    display: inline-block;
+    display: inline
 }
 
 main li {
     margin-left: 1.5rem;
+}
+
+main table {
+    line-height: 1.7;
+    font-size: 0.8rem;
+}
+main table td {
+    padding: 0 0.5rem;
+}
+main table.pagelist tr {
+    border-top: 1px solid __text_sub__;
+    border-bottom: 1px solid __text_sub__;
+}
+
+main blockquote {
+    padding-left: 1rem;
+    border-left: 0.25rem solid __text_sub__;
+    margin: 1rem 0;
+}
+
+main a.wikilink2 {
+    color: __text_sub__;
 }
 
 /* edit Form */
@@ -156,6 +193,18 @@ div.editBox fieldset {
     padding: 0.5rem;
     font-size: 0.8rem;
 }
+div.editBox button {
+    padding: 0.25rem;
+}
+div.editBox select {
+    margin-left: 0.5rem;
+}
+
+/* search result */
+dl.search_results dt {
+    margin-top: 1rem;
+}
+
 /* footer */
 footer {
     margin-top: 2rem;
@@ -172,29 +221,21 @@ footer div#tools {
         grid-template-areas: "userinfo userinfo" "pagemenu pagemenu";
     }
 }
-footer div#searchtools {
-    grid-area: search;
-    padding-right: 1rem;
-}
-@media only screen and (max-width:780px) {
-    footer div#searchtools {
-        padding-right: 0;
-    }
-}
+
 footer div#userinfo {
     grid-area: userinfo;
     font-size: 0.8rem;
     color: __text_footer__;
 }
-@media only screen and (max-width:780px) {
-    footer div#userinfo {
-        text-align: right;
-    }
-}
 
 footer div#pagemenu {
     grid-area: pagemenu;
     text-align: right;
+}
+@media only screen and (max-width:780px) {
+    footer div#pagemenu {
+        text-align: left;
+    }
 }
 
 footer svg {
@@ -202,31 +243,20 @@ footer svg {
     fill: __text_footer__;
 }
 
-footer div#sitemenu ul li,
 footer div#pagemenu ul li {
     list-style: none;
     display: inline-block;
     margin-top: 0.25rem;
-}
-footer div#sitemenu ul li {
-    margin-right: 0.75rem;
-}
-footer div#pagemenu ul li {
     margin-left: 0.75rem;
 }
 
-footer div#sitemenu ul li span,
+@media only screen and (max-width:780px) {
+    footer div#pagemenu ul li {
+        margin-left: 0;
+        margin-right: 0.75rem;
+    }    
+}
+
 footer div#pagemenu ul li span {
-    display: none;
-}
-
-footer div#searchtools form input {
-    border: none;
-    border-bottom: 1px solid __border__;
-    width: 100%;
-    font-size: 1rem;
-}
-
-footer div#searchtools form button {
     display: none;
 }
