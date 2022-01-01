@@ -26,17 +26,20 @@
             <?php //include('header.php') ?>
             <!-- boilerplace start: move following section to header.php -->
             <header>
-                <h1 style="title">
-                    <?php             
-                    // display logo and wiki title in a link to the home page
-                    tpl_link(
-                        wl(),
-                        '<span>'.$conf['title'].'</span>',
-                        'accesskey="h" title="[H]"'
-                    );
-                    ?>
-                </h1>
-                <span class="tagline"><?php if ($conf['tagline']): echo $conf['tagline']; endif ?>&#8205;</span>
+                <div id="title">
+                    <h1 style="title">
+                        <?php             
+                        // display logo and wiki title in a link to the home page
+                        tpl_link(
+                            wl(),
+                            '<span>'.$conf['title'].'</span>',
+                            'accesskey="h" title="[H]"'
+                        );
+                        ?>
+                    </h1>
+                    <span class="tagline"><?php if ($conf['tagline']): echo $conf['tagline']; endif ?>&#8205;</span>
+                    <div class="pageId"><span><?php echo hsc($ID) ?></span></div>
+                </div>
                 <!-- TOOLS -->
                 <div id="tools">
                     <!-- SEARCH TOOLS -->
@@ -72,8 +75,6 @@
             <!-- boilerplace end -->
             <main>
                 <?php html_msgarea() ?>
-
-                <div class="pageId"><span><?php echo hsc($ID) ?></span></div>
 
                 <?php tpl_flush(); ?>
                 <section>

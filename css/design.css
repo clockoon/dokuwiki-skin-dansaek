@@ -17,7 +17,17 @@ h1, h2, h3, h4, h5, h6 {
 header {
     margin-bottom: 2rem;
 }
+
+header div#title {
+    display: grid;
+    grid-template-columns: 80fr 20fr;
+    grid-template-rows: 1rem 1rem;
+    grid-template-areas: "title title"
+                         "tagline pageid";
+}
+
 header h1, header h1 a {
+    grid-area: title;
     line-height: 1rem;
     font-size: 1.5rem;
     color: __text_header__;
@@ -25,8 +35,18 @@ header h1, header h1 a {
 }
 
 header span.tagline {
+    grid-area: tagline;
     color: __text_sub__;
     font-size: 1rem;
+}
+
+header div#title div.pageId {
+    grid-area: pageid;
+    text-align: right;
+    color: __text_sub__;
+}
+header div#title div.pageId span {
+    background-color: lightcyan;
 }
 
 header div#tools {
@@ -146,11 +166,6 @@ main h1:first-child {
     margin: 0;
 }
 
-main div.pageID {
-    text-align: left;
-    color: __text_sub__;
-    margin-bottom: 2rem;
-}
 main div.docInfo {
     color: __text_sub__;
     font-size: 0.8rem;
@@ -185,6 +200,10 @@ main blockquote {
 
 main a.wikilink2 {
     color: __text_sub__;
+}
+
+main pre {
+    white-space: pre-wrap;
 }
 
 /* edit Form */
