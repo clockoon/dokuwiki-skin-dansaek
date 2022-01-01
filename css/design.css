@@ -102,7 +102,7 @@ header div#searchtools form div#qsearch__out {
 @media only screen and (max-width:780px) {
     header div#searchtools form div#qsearch__out {
         display: block;
-        width: calc(100vw - 2rem);
+        width: ~"calc(100vw - 2rem)"; /* limited dokuwiki less parser; see https://forum.dokuwiki.org/d/12331-bug-css-width-calc-100-350px-not-working */
         margin-left: 0;
         font-size: 0.8rem;
     }
@@ -141,6 +141,7 @@ div#dw__toc ul {
 main h1:first-child {
     font-size: 3rem;
     text-decoration: underline;
+    text-underline-offset: 0.1rem;
     line-height: 1;
     margin: 0;
 }
