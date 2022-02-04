@@ -13,6 +13,11 @@ html {
 h1, h2, h3, h4, h5, h6 {
     font-family: Helvetica, Arial, sans-serif;
 }
+
+hr {
+    margin: 1rem 0;
+}
+
 /* header */
 header {
     margin-bottom: 2rem;
@@ -163,7 +168,7 @@ main h1:first-child {
     text-decoration: underline;
     text-underline-offset: 0.1rem;
     line-height: 1;
-    margin: 0;
+    margin: 0 0 1rem 0;
 }
 
 main div.docInfo {
@@ -206,6 +211,58 @@ main pre {
     white-space: pre-wrap;
 }
 
+/* For Bereaucracy plugin */
+form.bureaucracy__plugin fieldset {
+    padding: 1rem;
+}
+form.bureaucracy__plugin label {
+    display: block;
+    text-align: right;
+}
+form.bureaucracy__plugin label input.edit[type=text],
+form.bureaucracy__plugin label input.edit[type=password],
+form.bureaucracy__plugin label select {
+    width: 50%;
+    margin-left: 1rem;
+}
+form.bureaucracy__plugin label input[type=checkbox] {
+    width: 1rem;
+    height: 1rem;
+    margin-right: ~"calc(50% - 1rem)";
+    margin-left: 1rem;
+}
+form.bureaucracy__plugin label.textareafield span{
+    float: left;
+}
+form.bureaucracy__plugin label.textareafield textarea {
+    width: 100%;
+}
+form.bureaucracy__plugin button {
+    margin-top: 1rem;
+}
+
+@media only screen and (max-width:780px) {
+    form.bureaucracy__plugin label {
+        margin-top: 0.5rem;
+        width: 100%;
+    }
+    form.bureaucracy__plugin label span {
+        float: left;
+    }
+    form.bureaucracy__plugin label input.edit[type=text],
+    form.bureaucracy__plugin label input.edit[type=password],
+    form.bureaucracy__plugin label select {
+        width: 100%;
+        margin-left: 0;
+    }
+    form.bureaucracy__plugin label input[type=checkbox] {
+        margin-right: 0;
+    }
+}
+/* For backlink footer */
+h5#backlinks + div.level5 > div#plugin__backlinks {
+    color: __text_sub__;
+}
 /* edit Form */
 div.editBox textarea,
 div.editBox fieldset {

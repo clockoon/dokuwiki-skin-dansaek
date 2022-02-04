@@ -36,6 +36,7 @@
                             'accesskey="h" title="[H]"'
                         );
                         ?>
+                        <a href="/" style="color:#000;text-decoration:underline;">HOME</a> 
                     </h1>
                     <span class="tagline"><?php if ($conf['tagline']): echo $conf['tagline']; endif ?>&#8205;</span>
                     <div class="pageId"><span><?php echo hsc($ID) ?></span></div>
