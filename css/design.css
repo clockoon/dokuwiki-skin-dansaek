@@ -135,6 +135,14 @@ header div#searchtools form div#qsearch__out {
 header div#searchtools form button {
     display: none;
 }
+header .plugin_translation ul{
+    list-style: none;
+    display: inline-block;
+}
+header .plugin_translation ul li{
+    display: inline-block;
+    margin-right: 0.25rem;
+}
 
 /* TOC */
 div#dw__toc {
@@ -202,6 +210,9 @@ main blockquote {
     border-left: 0.25rem solid __text_sub__;
     margin: 1rem 0;
 }
+main svg {
+    width: 1rem;
+}
 
 main a.wikilink2 {
     color: __text_sub__;
@@ -209,6 +220,13 @@ main a.wikilink2 {
 
 main pre {
     white-space: pre-wrap;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.64rem;
+    background-color: #eee;
+}
+main code {
+    background-color: #eee;
 }
 
 /* For Bereaucracy plugin */

@@ -71,6 +71,10 @@
                         <?php endif ?>
                     </div>
                 <?php endif ?>
+                <?php
+                    $translation = plugin_load('helper','translation');
+                    if ($translation) echo $translation->showTranslations();
+                ?>
 
             </header>
             <!-- boilerplace end -->
