@@ -179,6 +179,9 @@ div#dw__toc > div {
 div#dw__toc ul {
     margin-left: 0;
 }
+div#dw__toc ul li {
+    line-height: 1.1rem;
+}
 
 /* main */
 main h1:first-child {
