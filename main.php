@@ -2,7 +2,7 @@
 /**
  * DokuWiki Default Template 2012
  *
- * @link     http://dokuwiki.org/template:voidroom
+ * @link     http://dokuwiki.org/template:dansaek
  * @author   Sungbin Jeon <clockoon@gmail.com>
  * @license  GPL 2 (http://www.gnu.org/licenses/gpl.html)
  */
@@ -20,7 +20,7 @@
         <?php //tpl_includeFile('meta.html') ?>
     </head>
 
-    <body class="<?php echo $INFO['namespace'];?>">
+    <body class="<?php echo ($ID==$conf['start'] ? '__front__' : '' ).$INFO['namespace'];?>">
         <div class="container">
             <!-- Header -->
             <?php //include('header.php') ?>
