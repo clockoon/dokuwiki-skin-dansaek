@@ -365,3 +365,30 @@ footer div#pagemenu ul li {
 footer div#pagemenu ul li span {
     display: none;
 }
+
+/* config manager */
+div #config__manager fieldset {
+    background-color: #fff;
+}
+
+div #config__manager fieldset td.value {
+    width: 21em;
+}
+
+div #config__manager td input.edit,
+div #config__manager td .input,
+div #config__manager td .input select {
+    width: 100%;
+}
+
+div #config__manager tr.default .input, 
+div #config__manager tr.default input, 
+div #config__manager tr.default textarea, 
+div #config__manager tr.default select, 
+div #config__manager .selectiondefault {
+    background-color: #ddd;
+}
+
+div #config__manager td.label label {
+    font-size: 0.7rem;
+}
