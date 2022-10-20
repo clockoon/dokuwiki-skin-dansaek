@@ -20,7 +20,7 @@
         <?php //tpl_includeFile('meta.html') ?>
     </head>
 
-    <body>
+    <body class="<?php echo $INFO['namespace'];?>">
         <div class="container">
             <!-- Header -->
             <?php //include('header.php') ?>

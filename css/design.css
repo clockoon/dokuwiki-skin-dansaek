@@ -1,5 +1,15 @@
 /* basic layout */
 
+/* body color */
+body {
+    background-color: white;
+}
+body[class^="wiki"] {
+    background-color: lightcyan;
+}
+body[class^="journal"] {
+    background-color: lightyellow;
+}
 /* typography */
 html {
     font-size: 20px;
