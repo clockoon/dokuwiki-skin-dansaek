@@ -49,6 +49,11 @@ header h1, header h1 a {
     text-decoration: none;
 }
 
+header h1 a.homelink {
+    color:#000;
+    text-decoration:underline;
+} 
+
 header span.tagline {
     grid-area: tagline;
     color: __text_sub__;
@@ -223,6 +228,11 @@ main blockquote {
     border-left: 0.25rem solid __text_sub__;
     margin: 1rem 0;
 }
+
+main img {
+    max-width: 100%;
+}
+
 main svg {
     width: 1rem;
 }
@@ -394,4 +404,40 @@ div #config__manager .selectiondefault {
 
 div #config__manager td.label label {
     font-size: 0.7rem;
+}
+
+/* front page style */
+/* clutter all distracting elements, or hide as matching color with background */
+body.__front__ header div#tools,
+body.__front__ header div.breadcrumbs,
+header h1 a.homelink,
+body.__front__ main div.docInfo,
+body.__front__ footer div#userinfo {
+    display: none;
+}
+
+body.__front__ footer svg {
+    fill: #eee;
+}
+
+body.__front__ main {
+    font-size: 20px;
+    color: #555;
+}
+@media only screen and (max-width:500px) {
+    body.__front__ main {
+        font-size: 16px;
+    }
+}
+
+body.__front__ main img {
+    margin-bottom: 1rem;
+}
+
+body.__front__ main li {
+    list-style: none;
+    margin-left: 0; 
+}
+body.__front__ main li a{
+    color: #999;
 }
