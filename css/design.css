@@ -65,6 +65,7 @@ header div#title div.pageId {
     text-align: right;
     color: __text_sub__;
 }
+
 header div#title div.pageId span {
     background-color: lightcyan;
 }
@@ -252,6 +253,11 @@ main code {
     background-color: #eee;
 }
 
+/* For tagp plugin */
+main span.tag_inline {
+    padding: 0.125rem 0.25rem;
+}
+
 /* For Bereaucracy plugin */
 form.bureaucracy__plugin fieldset {
     padding: 1rem;
@@ -414,6 +420,10 @@ header h1 a.homelink,
 body.__front__ main div.docInfo,
 body.__front__ footer div#userinfo {
     display: none;
+}
+
+body.__front__ header div.pageId {
+    font-size: 1rem;
 }
 
 body.__front__ footer svg {

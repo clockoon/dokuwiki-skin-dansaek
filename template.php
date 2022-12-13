@@ -19,7 +19,7 @@
     </head>
 
     <body class="<?php echo ($ID==$conf['start'] ? '__front__' : '' ).$INFO['namespace'];?>">
-        <div class="container">
+        <div class="container dokuwiki">
             <!-- Header -->
             <?php //include('header.php') ?>
             <!-- boilerplace start: move following section to header.php -->
@@ -43,7 +43,13 @@
                         } else if ($conf['tagline']) {
                             echo $conf['tagline'];
                         } ?>&#8205;</span>
-                    <div class="pageId"><span><?php echo hsc($ID) ?></span></div>
+                    <div class="pageId">
+                        <span>
+                            <?php 
+                            if ($ID==$conf['start']) { echo date("Y"); }
+                            else { echo hsc($ID); } ?>
+                        </span>
+                    </div>
                 </div>
                 <!-- TOOLS -->
                 <div id="tools">
