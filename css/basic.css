@@ -133,3 +133,6 @@ button {
     padding: 0.1rem 0.25rem;
     margin: 0.15rem 0;
 }
+input {
+    padding: 0.15rem;
+}
