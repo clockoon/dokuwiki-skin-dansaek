@@ -217,7 +217,7 @@ main table {
     font-size: 0.8rem;
 }
 main table td {
-    padding: 0 0.5rem;
+    padding: 0.25rem 0.5rem;
 }
 main table.pagelist tr {
     border-top: 1px solid __text_sub__;
@@ -668,4 +668,25 @@ html.popup {
 #dw__mediasearch input.edit {
 }
 #dw__mediasearch button {
+}
+
+/*____________ ACL _____________________*/
+div#acl__tree {
+    font-size: 0.6rem;
+    width: 39%;
+}
+div#acl__tree li {
+    margin-left: 0.25rem;
+    text-decoration: none;
+}
+div#acl__tree a.wikilink1, a.idx_dir {
+    margin-left: 0.25rem;
+    text-decoration: none;
+}
+div#acl__tree a.wikilink1:hover, a.idx_dir:hover {
+    text-decoration: underline;
+}
+div#acl__detail {
+    font-size: 0.75rem;
+    width: 59%;
 }
