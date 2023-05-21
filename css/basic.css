@@ -120,3 +120,12 @@ main h6 {
     line-height: 1.7;
     margin: 1rem 0;
 }
+
+/* readability */
+@media only screen and (max-width:780px) {
+    input,
+    textarea,
+    select {
+        font-size: 16px; /* disabling auto zooming on mobile */
+    }
+}
