@@ -1,5 +1,15 @@
 /* basic layout */
 
+/* body color */
+body {
+    background-color: white;
+}
+body[class^="wiki"] {
+    background-color: lightcyan;
+}
+body[class^="journal"] {
+    background-color: lightyellow;
+}
 /* typography */
 html {
     font-size: 20px;
@@ -25,7 +35,7 @@ header {
 
 header div#title {
     display: grid;
-    grid-template-columns: 80fr 20fr;
+    /*grid-template-columns: 80fr 20fr;*/
     grid-template-rows: 1rem 1rem;
     grid-template-areas: "title title"
                          "tagline pageid";
@@ -39,6 +49,11 @@ header h1, header h1 a {
     text-decoration: none;
 }
 
+header h1 a.homelink {
+    color:#000;
+    text-decoration:underline;
+} 
+
 header span.tagline {
     grid-area: tagline;
     color: __text_sub__;
@@ -50,6 +65,7 @@ header div#title div.pageId {
     text-align: right;
     color: __text_sub__;
 }
+
 header div#title div.pageId span {
     background-color: lightcyan;
 }
@@ -169,6 +185,9 @@ div#dw__toc > div {
 div#dw__toc ul {
     margin-left: 0;
 }
+div#dw__toc ul li {
+    line-height: 1.1rem;
+}
 
 /* main */
 main h1:first-child {
@@ -198,7 +217,7 @@ main table {
     font-size: 0.8rem;
 }
 main table td {
-    padding: 0 0.5rem;
+    padding: 0.25rem 0.5rem;
 }
 main table.pagelist tr {
     border-top: 1px solid __text_sub__;
@@ -210,6 +229,11 @@ main blockquote {
     border-left: 0.25rem solid __text_sub__;
     margin: 1rem 0;
 }
+
+main img {
+    max-width: 100%;
+}
+
 main svg {
     width: 1rem;
 }
@@ -227,6 +251,11 @@ main pre {
 }
 main code {
     background-color: #eee;
+}
+
+/* For tagp plugin */
+main span.tag_inline {
+    padding: 0.125rem 0.25rem;
 }
 
 /* For Bereaucracy plugin */
@@ -354,4 +383,338 @@ footer div#pagemenu ul li {
 
 footer div#pagemenu ul li span {
     display: none;
+}
+
+/* config manager */
+div #config__manager fieldset {
+    background-color: #fff;
+}
+
+div #config__manager fieldset td.value {
+    width: 21em;
+}
+
+div #config__manager td input.edit,
+div #config__manager td .input,
+div #config__manager td .input select {
+    width: 100%;
+}
+
+div #config__manager tr.default .input, 
+div #config__manager tr.default input, 
+div #config__manager tr.default textarea, 
+div #config__manager tr.default select, 
+div #config__manager .selectiondefault {
+    background-color: #ddd;
+}
+
+div #config__manager td.label label {
+    font-size: 0.7rem;
+}
+
+/* front page style */
+/* clutter all distracting elements, or hide as matching color with background */
+body.__front__ header div#tools,
+body.__front__ header div.breadcrumbs,
+header h1 a.homelink,
+body.__front__ main div.docInfo,
+body.__front__ footer div#userinfo {
+    display: none;
+}
+
+body.__front__ header div.pageId {
+    font-size: 1rem;
+}
+
+body.__front__ footer svg {
+    fill: #eee;
+}
+
+body.__front__ main {
+    font-size: 20px;
+    color: #555;
+}
+@media only screen and (max-width:500px) {
+    body.__front__ main {
+        font-size: 16px;
+    }
+}
+
+body.__front__ main img {
+    margin-bottom: 1rem;
+}
+
+body.__front__ main li {
+    list-style: none;
+    margin-left: 0; 
+}
+body.__front__ main li a{
+    color: #999;
+}
+
+/* mediamanager */
+/**
+ * This file provides styles for the media manager popup
+ * (mediamanager.php).
+ */
+
+/*____________ structure ____________*/
+
+html.popup {
+    overflow: auto;
+}
+
+#media__manager {
+    height: 100%;
+    overflow: hidden;
+    font-size: 0.8rem;
+}
+
+#mediamgr__aside {
+    width: 30%;
+    height: 100%;
+    overflow: auto;
+    position: absolute;
+    left: 0;
+    border-right: 1px solid @ini_border;
+}
+[dir=rtl] #mediamgr__aside {
+    left: auto;
+    right: 0;
+    border-right-width: 0;
+    border-left: 1px solid @ini_border;
+}
+#mediamgr__aside .pad {
+    padding: .5em;
+}
+
+#mediamgr__content {
+    width: 69.7%;
+    height: 100%;
+    overflow: auto;
+    position: absolute;
+    right: 0;
+}
+[dir=rtl] #mediamgr__content {
+    right: auto;
+    left: 0;
+}
+#mediamgr__content .pad {
+    padding: .5em;
+}
+
+#media__manager h1,
+#media__manager h2 {
+    font-size: 1.5rem;
+    margin-bottom: .5em;
+    height: 2.2rem;
+    border-bottom: 1px solid @ini_border;
+}
+
+/* left side
+********************************************************************/
+
+/*____________ options ____________*/
+
+#media__opts {
+    margin-bottom: .5em;
+}
+
+#media__opts input {
+    margin-right: .3em;
+}
+[dir=rtl] #media__opts input {
+    margin-right: 0;
+    margin-left: .3em;
+}
+#media__opts label {
+}
+
+/*____________ tree ____________*/
+
+#media__tree ul {
+    padding-left: .2em;
+}
+[dir=rtl] #media__tree ul {
+    padding-left: 0;
+    padding-right: .2em;
+}
+#media__tree ul li {
+    clear: left;
+    list-style-type: none;
+    list-style-image: none;
+    margin-left: 0;
+}
+[dir=rtl] #media__tree ul li {
+    clear: right;
+    margin-right: 0;
+}
+#media__tree ul li img {
+    float: left;
+    padding: .5em .3em 0 0;
+}
+[dir=rtl] #media__tree ul li img {
+    float: right;
+    padding: .5em 0 0 .3em;
+}
+#media__tree ul li div.li {
+    display: inline;
+}
+#media__tree ul li li {
+    margin-left: 1.5em;
+}
+[dir=rtl] #media__tree ul li li {
+    margin-left: 0;
+    margin-right: 1.5em;
+}
+
+/* right side
+********************************************************************/
+
+/*____________ upload form ____________*/
+
+#media__opts, #media__tree {
+    font-size: 0.7rem;
+}
+
+/* upload info */
+#media__content div.upload {
+    font-size: .8rem;
+    margin-bottom: .5em;
+}
+
+#mediamanager__uploader {
+    margin-bottom: 1em;
+}
+#mediamanager__uploader p {
+    margin-bottom: .5em;
+}
+#mediamanager__uploader .qq-upload-button {
+    text-decoration: underline;
+}
+
+/*____________ file list ____________*/
+
+#media__content img.load {
+    margin: 1em auto;
+}
+
+#media__content .odd,
+#media__content .even {
+    padding: .5em;
+}
+#media__content .odd {
+    background-color: @ini_background_alt;
+}
+#media__content .even {
+}
+/* highlight newly uploaded or edited file */
+#media__content #scroll__here {
+    border: 1px dashed @ini_border;
+}
+
+/* link which inserts media file */
+#media__content a.mediafile {
+    margin-right: 1.5em;
+    font-weight: bold;
+    cursor: pointer;
+}
+[dir=rtl] #media__content a.mediafile {
+    margin-right: 0;
+    margin-left: 1.5em;
+}
+#media__content span.info {
+}
+#media__content img.btn {
+    vertical-align: text-bottom;
+}
+
+/* info how to insert media, if JS disabled */
+#media__content div.example {
+    color: @ini_text_neu;
+    margin-left: 1em;
+}
+
+#media__content div.detail {
+    padding: .2em 0;
+}
+#media__content div.detail div.thumb {
+    float: left;
+    margin: 0 .5em 0 18px;
+}
+[dir=rtl] #media__content div.detail div.thumb {
+    float: right;
+    margin: 0 18px 0 .5em;
+}
+#media__content div.detail div.thumb a {
+    display: block;
+    cursor: pointer;
+}
+#media__content div.detail p {
+    margin-bottom: 0;
+}
+
+
+/*____________ media search ____________*/
+
+#dw__mediasearch {
+}
+#dw__mediasearch p {
+}
+#dw__mediasearch label {
+}
+#dw__mediasearch label span {
+}
+#dw__mediasearch input.edit {
+}
+#dw__mediasearch button {
+}
+
+/*____________ ACL _____________________*/
+div#acl__tree {
+    font-size: 0.6rem;
+    width: 39%;
+}
+div#acl__tree li {
+    margin-left: 0.25rem;
+    text-decoration: none;
+}
+div#acl__tree a.wikilink1, a.idx_dir {
+    margin-left: 0.25rem;
+    text-decoration: none;
+}
+div#acl__tree a.wikilink1:hover, a.idx_dir:hover {
+    text-decoration: underline;
+}
+div#acl__detail {
+    font-size: 0.75rem;
+    width: 59%;
+}
+
+/* Login page */
+form#dw__login fieldset {
+    padding: 0.25rem;
+}
+
+form#dw__login div.no br {
+    display: none;
+}
+
+form#dw__login label.block {
+    margin: 0.25rem;
+    display: grid;
+    width: 100%;
+    grid-template-columns: 10fr 40fr 40fr 10fr;
+    grid-template-areas: ". label input .";
+}
+
+form#dw__login label.block span {
+    grid-area: label;
+    text-align: right;
+    padding-right: 0.25rem;
+}
+
+form#dw__login label.block input {
+    grid-area: input;
+    padding-left: 0.25rem;
 }
