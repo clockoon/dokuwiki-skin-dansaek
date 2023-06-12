@@ -725,3 +725,13 @@ form#dw__login button {
     padding: 0.125rem 0.5rem;
     margin: 0.25rem;
 }
+
+/* Pagelist plugin */
+@media only screen and (max-width:500px) {
+    div.dokuwiki table.pagelist {
+	width: 100%;
+    }
+    div.dokuwiki td.date {
+	float: right;
+    }
+}
