@@ -1,15 +1,26 @@
 /* basic layout */
 
 /* body color */
+/* temperary it will be on background.less */
 body {
-    background-color: white;
+    background-color: __bgcolor_base__;
 }
-body[class^="wiki"] {
-    background-color: lightcyan;
+body[class^="@{ini_bgns_1}"] {
+    background-color: __bgcolor_1__;
 }
-body[class^="journal"] {
-    background-color: lightyellow;
+body[class^="@{ini_bgns_2}"] {
+    background-color: __bgcolor_2__;
 }
+body[class^="@{ini_bgns_3}"] {
+    background-color: __bgcolor_3__;
+}
+body[class^="@{ini_bgns_4}"] {
+    background-color: __bgcolor_4__;
+}
+body[class^="@{ini_bgns_5}"] {
+    background-color: __bgcolor_5__;
+}
+
 /* typography */
 html {
     font-size: 20px;
@@ -310,6 +321,7 @@ form.bureaucracy__plugin button {
 h5#backlinks + div.level5 > div#plugin__backlinks {
     color: __text_sub__;
 }
+
 /* edit Form */
 div.editBox textarea,
 div.editBox fieldset {
@@ -317,11 +329,22 @@ div.editBox fieldset {
     padding: 0.5rem;
     /*font-size: 0.8rem;*/ /* ignoring zooming*/
 }
+
+div.editButtons button {
+    padding: 0.25rem 0.5rem;
+    margin-right: 0.5rem;
+}
+
 div.editBox button {
     padding: 0.25rem;
 }
+
 div.editBox select {
     margin-left: 0.5rem;
+}
+
+div.editBox input#edit__summary {
+    width: 100%;
 }
 
 /* search result */
@@ -734,4 +757,32 @@ form#dw__login button {
     div.dokuwiki td.date {
 	float: right;
     }
+}
+
+/* Struct plugin */
+@media only screen and (max-width:500px) {
+    .dokuwiki .struct_entry_form div.field > span.input input.struct_date,
+    .dokuwiki .struct_entry_form div.field > span.input input.struct_media {
+	width: 100% !important;
+    }
+
+    .dokuwiki .struct_entry_form div.field > span.input select,
+    .dokuwiki .struct_entry_form div.field > span.input input {
+	font-size: 1rem;
+    }
+}
+
+.dokuwiki .struct_entry_form div.field > label span.label,
+.dokuwiki .struct_entry_form div.field > span.input select,
+.dokuwiki .struct_entry_form div.field > span.input input {
+    font-size: 0.8rem;
+}
+
+.dokuwiki .struct_entry_form div.field > span.input select {
+    margin-left: 0;
+    padding: 0.15rem;
+}
+
+.dokuwiki .struct_entry_form div.field > label {
+    width: 35%;
 }
