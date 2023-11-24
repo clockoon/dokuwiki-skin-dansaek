@@ -9,16 +9,34 @@
 ?>
 <html lang="<?php echo $conf['lang'] ?>" dir="<?php echo $lang['direction'] ?>" class="no-js">
     <head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RV08W94V95"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-RV08W94V95');
+</script>
         <meta charset="utf-8" />
-        <title><?php tpl_pagetitle() ?> [<?php echo strip_tags($conf['title']) ?>]</title>
+        <?php $full_title=tpl_pagetitle(null,true).' ['.strip_tags($conf['title']).']'; ?>
+        <title><?php echo $full_title;?></title>
         <script>(function(H){H.className=H.className.replace(/\bno-js\b/,'js')})(document.documentElement)</script>
         <?php tpl_metaheaders() ?>
         <meta name="viewport" content="width=device-width,initial-scale=1" />
-        <?php echo tpl_favicon(array('favicon', 'mobile')) ?>
+        <?php echo tpl_favicon(array('favicon', 'mobile')); ?>
         <?php //tpl_includeFile('meta.html') ?>
+        <!-- Open Graph -->
+        <meta property="og:url" content="<?php echo 'https://'.$_SERVER['HTTP_HOST'].wl($ID); ?>"/>
+        <meta property="og:title" content="<?php echo $full_title; ?>" />
+        <meta property="og:type" content="website" />
+        <meta property="og:description" content="" />
+        <meta property="og:image" content="" />
+        <!-- twitter card -->
+        <meta property="twitter:card" content="summary" />
     </head>
 
-    <body class="<?php echo ($ID==$conf['start'] ? '__front__' : '' ).$INFO['namespace'];?>">
+    <body class="<?php echo ($ID==$conf['start'] ? '__front__' : '' ).explode(':', $INFO['namespace'])[0];?>">
         <div class="container dokuwiki">
             <!-- Header -->
             <?php //include('header.php') ?>
@@ -34,7 +52,7 @@
                             'accesskey="h" title="[H]"'
                         );
                         ?>
-                        <a href="/" class="homelink">HOME</a> 
+::<a href="/<?php echo ($ID==$conf['start'] ? '/' : explode(':', $INFO['namespace'])[0].':start'); ?>" class="homelink"><?php echo ($ID==$conf['start'] ? 'MAIN' : strtoupper(explode(':', $INFO['namespace'])[0])); ?></a> 
                     </h1>
                     <span class="tagline">
                         <?php 

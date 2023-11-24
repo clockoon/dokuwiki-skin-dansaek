@@ -37,6 +37,7 @@ h1, h2, h3, h4, h5, h6 {
 
 hr {
     margin: 1rem 0;
+
 }
 
 /* header */
@@ -61,8 +62,8 @@ header h1, header h1 a {
 }
 
 header h1 a.homelink {
-    color:#000;
-    text-decoration:underline;
+    color:#999;
+    text-decoration:none;
 } 
 
 header span.tagline {
@@ -202,7 +203,7 @@ div#dw__toc ul li {
 
 /* main */
 main h1:first-child {
-    font-size: 3rem;
+    font-size: 2rem;
     text-decoration: underline;
     text-underline-offset: 0.1rem;
     line-height: 1;
@@ -439,7 +440,6 @@ div #config__manager td.label label {
 /* clutter all distracting elements, or hide as matching color with background */
 body.__front__ header div#tools,
 body.__front__ header div.breadcrumbs,
-header h1 a.homelink,
 body.__front__ main div.docInfo,
 body.__front__ footer div#userinfo {
     display: none;
@@ -785,4 +785,12 @@ form#dw__login button {
 
 .dokuwiki .struct_entry_form div.field > label {
     width: 35%;
+}
+
+.dokuwiki .struct_entry_form div.field > span.input input:not([type='checkbox']):not([type='color']).struct_media {
+    width: 100%;
+}
+
+.dokuwiki .structaggregation table th a {
+    color: #222;
 }
