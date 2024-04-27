@@ -230,7 +230,12 @@ main table {
 }
 main table td {
     padding: 0.25rem 0.5rem;
+    white-space: nowrap;
 }
+main table td.col0 {
+    white-space: normal;
+}
+
 main table.pagelist tr {
     border-top: 1px solid __text_sub__;
     border-bottom: 1px solid __text_sub__;

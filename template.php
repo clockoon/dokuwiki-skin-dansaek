@@ -65,7 +65,7 @@
                         <span>
                             <?php 
                             if ($ID==$conf['start']) { echo date("Y"); }
-                            else { echo hsc($ID); } ?>
+                            else { echo (strlen(hsc($ID)) > 20) ? substr(hsc($ID), 0, 20) . '...' : hsc($ID); } ?>
                         </span>
                     </div>
                 </div>
