@@ -418,6 +418,9 @@ footer div#pagemenu ul li span {
 div #config__manager fieldset {
     background-color: #fff;
 }
+div #config__manager fieldset * {
+    text-wrap: initial;
+}
 
 div #config__manager fieldset td.value {
     width: 21em;
@@ -425,7 +428,8 @@ div #config__manager fieldset td.value {
 
 div #config__manager td input.edit,
 div #config__manager td .input,
-div #config__manager td .input select {
+div #config__manager td .input select,
+div #config__manager td textarea.edit {
     width: 100%;
 }
 
@@ -441,6 +445,23 @@ div #config__manager td.label label {
     font-size: 0.7rem;
 }
 
+@media only screen and (max-width:500px) {
+    div #config__manager td.label {
+	float: left;
+	padding: 1rem 0 0.25rem 0;
+	font-size: 1rem;
+    }
+    div #config__manager td.value {
+	float: left;
+	clear: left;
+	margin-bottom: 1rem;
+	padding: 0.25rem 0 1rem 0;
+	border-bottom: 1p dashed #999;
+    }
+    #config__manager td.label span.outkey {
+	margin-left: 0;
+    }
+}
 /* front page style */
 /* clutter all distracting elements, or hide as matching color with background */
 body.__front__ header div#tools,
@@ -798,4 +819,8 @@ form#dw__login button {
 
 .dokuwiki .structaggregation table th a {
     color: #222;
+}
+
+div#plugin__struct_output table * {
+    text-wrap: initial;
 }
