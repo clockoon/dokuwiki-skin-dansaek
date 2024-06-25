@@ -44,15 +44,23 @@
             <header>
                 <div id="title">
                     <h1 style="title">
-                        <?php             
+                        <?php
+                             // get logo either out of the template images folder or data/media folder
+                             $logoSize = [];
+$logo = tpl_getMediaFile([
+    ':wiki:logo.svg', ':logo.svg',
+    ':wiki:logo.png', ':logo.png',
+    'images/logo.svg', 'images/logo.png'
+], false, $logoSize);
                         // display logo and wiki title in a link to the home page
                         tpl_link(
                             wl(),
-                            '<span>'.$conf['title'].'</span>',
+                            //'<span>'.$conf['title'].'</span>',
+                            '<img src="' . $logo . '" ' . ($logoSize ? $logoSize[3] : '') . ' alt="" />' ,
                             'accesskey="h" title="[H]"'
                         );
                         ?>
-::<a href="/<?php echo ($ID==$conf['start'] ? '/' : explode(':', $INFO['namespace'])[0].':start'); ?>" class="homelink"><?php echo ($ID==$conf['start'] ? 'MAIN' : strtoupper(explode(':', $INFO['namespace'])[0])); ?></a> 
+ <a href="/<?php echo ($ID==$conf['start'] ? '/' : explode(':', $INFO['namespace'])[0].':start'); ?>" class="homelink"><?php echo ($ID==$conf['start'] ? 'MAIN' : strtoupper(explode(':', $INFO['namespace'])[0])); ?></a> 
                     </h1>
                     <span class="tagline">
                         <?php 

@@ -61,6 +61,12 @@ header h1, header h1 a {
     text-decoration: none;
 }
 
+header h1 img {
+    width: 3rem;
+    height: 1.2rem;
+    object-fit: cover;
+}
+
 header h1 a.homelink {
     color:#999;
     text-decoration:none;
@@ -216,6 +222,13 @@ main div.docInfo {
     margin-top: 0.5rem;
 }
 
+main div.footnotes {
+    font-size: 0.75rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: solid 1px #777;
+}
+    
 main div.footnotes > .fn > div {
     display: inline
 }
@@ -813,9 +826,12 @@ form#dw__login button {
     width: 35%;
 }
 
-.dokuwiki .struct_entry_form div.field > span.input input:not([type='checkbox']):not([type='color']).struct_media {
+.dokuwiki .struct_entry_form div.field > span.input input:not([type='checkbox']):not([type='color']).struct_media,
+.dokuwiki .struct_entry_form div.field > span.input .multiwrap {
     width: 100%;
 }
+
+
 
 .dokuwiki .structaggregation table th a {
     color: #222;
