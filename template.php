@@ -46,12 +46,12 @@
                     <h1 style="title">
                         <?php
                              // get logo either out of the template images folder or data/media folder
-                             $logoSize = [];
-$logo = tpl_getMediaFile([
-    ':wiki:logo.svg', ':logo.svg',
-    ':wiki:logo.png', ':logo.png',
-    'images/logo.svg', 'images/logo.png'
-], false, $logoSize);
+                        $logoSize = [];
+                        $logo = tpl_getMediaFile([
+                            ':wiki:logo.svg', ':logo.svg',
+                                ':wiki:logo.png', ':logo.png',
+                                'images/logo.svg', 'images/logo.png'
+                        ], false, $logoSize);
                         // display logo and wiki title in a link to the home page
                         tpl_link(
                             wl(),
@@ -76,6 +76,10 @@ $logo = tpl_getMediaFile([
                             else { echo (strlen(hsc($ID)) > 20) ? substr(hsc($ID), 0, 20) . '...' : hsc($ID); } ?>
                         </span>
                     </div>
+                </div>
+                <!-- TOPBAR -->
+                <div id="topbar">
+                    <?php tpl_include_page($conf['sidebar'], 1, 1) /* includes the nearest sidebar page */ ?>
                 </div>
                 <!-- TOOLS -->
                 <div id="tools">
