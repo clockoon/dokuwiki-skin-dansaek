@@ -7,6 +7,7 @@
  * @license  GPL 2 (http://www.gnu.org/licenses/gpl.html)
  */
 ?>
+<!DOCTYPE html>
 <html lang="<?php echo $conf['lang'] ?>" dir="<?php echo $lang['direction'] ?>" class="no-js">
   <head>
 	  <!-- Google tag (gtag.js) -->

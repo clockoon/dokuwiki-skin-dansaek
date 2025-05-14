@@ -8,4 +8,6 @@ jQuery( document ).ready( function( $ ) {
     $("main>div.pageId").insertAfter("main>section>h1");
     // hide qsearch__out
     $("header div#searchtools>form div#qsearch__out").hide();
+    // replace editbutton range
+    //$("form.btn_secedit>div.no>input[name=range]").val("1-2");
 } );

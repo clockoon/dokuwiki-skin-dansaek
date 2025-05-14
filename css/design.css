@@ -25,7 +25,7 @@ body[class^="@{ini_bgns_5}"] {
 html {
     font-size: 20px;
 }
-@media only screen and (max-width:500px) {
+@media only screen and (max-width:600px) {
     html,body {
         font-size: 16px;
     }
@@ -52,8 +52,8 @@ header div#title {
     grid-template-areas: "title title"
                          "tagline pageid";
     border-bottom: 1px solid #ccc;
-    border-top: 1px solid #ccc;
-    padding: 0.5rem 0;
+    /*border-top: 1px solid #ccc;*/
+    padding-bottom: 0.5rem;
 }
 
 header h1, header h1 a {
@@ -271,6 +271,8 @@ main li {
 main table {
     line-height: 1.7;
     font-size: 0.8rem;
+    table-layout: fixed;
+    width: 100%;
 }
 main table td {
     padding: 0.25rem 0.5rem;
@@ -376,8 +378,12 @@ h5#backlinks + div.level5 > div#plugin__backlinks {
 div.editBox textarea,
 div.editBox fieldset {
     width: 100%;
-    padding: 0.5rem;
-    /*font-size: 0.8rem;*/ /* ignoring zooming*/
+    padding: 0.25rem;
+    font-size: 0.75rem; /* ignoring zooming*/
+}
+
+div.editBox textarea {
+    height: 50vh
 }
 
 div.editButtons button {
@@ -489,7 +495,7 @@ div #config__manager td.label label {
     font-size: 0.7rem;
 }
 
-@media only screen and (max-width:500px) {
+@media only screen and (max-width:600px) {
     div #config__manager td.label {
 	float: left;
 	padding: 1rem 0 0.25rem 0;
@@ -528,7 +534,7 @@ body.__front__ main {
     font-size: 20px;
     color: #555;
 }
-@media only screen and (max-width:500px) {
+@media only screen and (max-width:600px) {
     body.__front__ main {
         font-size: 16px;
     }
@@ -821,7 +827,7 @@ form#dw__login button {
 }
 
 /* Pagelist plugin */
-@media only screen and (max-width:500px) {
+@media only screen and (max-width:600px) {
     div.dokuwiki table.pagelist {
 	width: 100%;
     }
@@ -831,7 +837,7 @@ form#dw__login button {
 }
 
 /* Struct plugin */
-@media only screen and (max-width:500px) {
+@media only screen and (max-width:600px) {
     .dokuwiki .struct_entry_form div.field > span.input input.struct_date,
     .dokuwiki .struct_entry_form div.field > span.input input.struct_media {
 	width: 100% !important;
@@ -872,3 +878,25 @@ form#dw__login button {
 div#plugin__struct_output table * {
     text-wrap: initial;
 }
+
+/* jquery UI theme, overriding smoothness theme */
+.ui-widget-header, .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
+    background: #eee;
+}
+@media only screen and (max-width:600px) {
+    /* mobile dialog do not need to be resized */
+    .ui-dialog {
+	width: 100% !important;
+    }
+    .ui-dialog-content {
+	height: 100% !important;
+    }
+}
+<<<<<<< HEAD
+=======
+
+/* upgrade plugin */
+div #plugin__upgrade {
+    font-size: 16px;
+}
+>>>>>>> fb5571f (refine style)
