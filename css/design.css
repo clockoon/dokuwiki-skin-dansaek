@@ -892,11 +892,8 @@ div#plugin__struct_output table * {
 	height: 100% !important;
     }
 }
-<<<<<<< HEAD
-=======
 
 /* upgrade plugin */
 div #plugin__upgrade {
     font-size: 16px;
 }
->>>>>>> fb5571f (refine style)
