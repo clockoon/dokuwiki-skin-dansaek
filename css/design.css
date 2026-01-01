@@ -248,6 +248,7 @@ main h1:first-child {
 }
 
 main div.docInfo {
+    display: inline-block;
     color: __text_sub__;
     font-size: 0.8rem;
     margin-top: 0.5rem;
@@ -614,6 +615,21 @@ html.popup {
 /* left side
 ********************************************************************/
 
+#mediamanager__page .namespaces {
+    width: 20%;
+    min-width: 10rem;
+}
+
+#mediamanager__page .namespaces h2 {
+    line-height: 1.0;
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+#mediamanager__page .panel {
+    float: left;
+}
+
 /*____________ options ____________*/
 
 #media__opts {
@@ -629,6 +645,7 @@ html.popup {
 }
 #media__opts label {
 }
+
 
 /*____________ tree ____________*/
 
@@ -671,6 +688,22 @@ html.popup {
 /* right side
 ********************************************************************/
 
+#mediamanager__page .filelist {
+    width: 60%;
+    min-width: 20rem;
+}
+.dokuwiki .tabs > ul li, .dokuwiki ul.tabs li {
+    font-family: Helvetica, Arial, sans-serif;
+    float: left;
+    list-style: none;
+    font-size: 1.2rem;
+    line-height: 1.0;
+}
+
+#mediamanager__page .panelHeader form.options .ui-controlgroup-horizontal label {
+    font-size: 0.75rem;
+    padding: 0.15rem 0.3rem;
+}
 /*____________ upload form ____________*/
 
 #media__opts, #media__tree {
@@ -694,6 +727,10 @@ html.popup {
 }
 
 /*____________ file list ____________*/
+
+#mediamanager__page .panelHeader {
+    padding: 1rem;
+}
 
 #media__content img.load {
     margin: 1em auto;
@@ -754,6 +791,88 @@ html.popup {
     margin-bottom: 0;
 }
 
+#mediamanager__page .filelist .thumbs li {
+    width: 100px;
+    min-height: 130px;
+    display: inline-block;
+
+}
+
+#mediamanager__page .filelist .thumbs li .name, 
+#mediamanager__page .filelist .thumbs li .size, 
+#mediamanager__page .filelist .thumbs li .filesize, 
+#mediamanager__page .filelist .thumbs li .date {
+    overflow: hidden;
+    float: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 90px;
+    font-size: 0.65rem;
+    text-align: center;
+}
+
+#mediamanager__page .filelist .thumbs li .date {
+    white-space: normal;
+}
+
+#mediamanager__page .filelist .thumbs li dt a img {
+    max-width: 90px;
+    max-height: 90px;
+}
+
+#mediamanager__page .filelist .rows li {
+    list-style: none;
+    display: block;
+    max-height: 50px;
+    margin: 0 0 3px 0;
+    overflow: hidden;
+}
+
+#mediamanager__page .filelist .rows li .name, 
+#mediamanager__page .filelist .rows li .size, 
+#mediamanager__page .filelist .rows li .filesize, 
+#mediamanager__page .filelist .rows li .date {
+    overflow: hidden;
+    float: left;
+    text-overflow: ellipsis;
+    margin-left: 0.5rem;
+    white-space: nowrap;
+}
+
+#mediamanager__page .filelist .rows li .name {
+    width: 30%;
+    font-weight: bold;
+}
+
+#mediamanager__page .filelist .rows li .size, 
+#mediamanager__page .filelist .rows li .filesize {
+    width: 15%;
+}
+
+#mediamanager__page .filelist .rows li .date {
+    width: 20%;
+}
+
+#mediamanager__page .filelist .rows li dt {
+    float: left;
+    width: 10%;
+    height: 40px;
+    text-align: center;
+}
+
+#mediamanager__page .filelist .rows li dt a img {
+    max-width: 40px;
+    max-height: 40px;
+}
+
+#mediamanager__page .filelist .rows li dt a {
+    width: 100px;
+    height: 40px;
+}
+
+#mediamanager__page .filelist .rows li dd {
+    font-size: 0.75rem;
+}
 
 /*____________ media search ____________*/
 
