@@ -40,6 +40,17 @@ hr {
 
 }
 
+.dokuwiki a.urlextern, 
+.dokuwiki a.windows, 
+.dokuwiki a.mail, 
+.dokuwiki a.mediafile, 
+.dokuwiki a.interwiki {
+    background-size: 1.2em;
+    background-repeat: no-repeat;
+    background-position: 0 center;
+    padding: 0 0 0 1.4em;
+}
+
 /* header */
 header {
     margin-bottom: 2rem;
@@ -1015,4 +1026,78 @@ div#plugin__struct_output table * {
 /* upgrade plugin */
 div #plugin__upgrade {
     font-size: 16px;
+}
+
+/********* Admin pages ********/
+
+/* Extension Manager */
+main div#extension__manager ul.tabs li {
+    font-size: 1rem;
+    margin-left: 0;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+main div#extension__manager ul.tabs li a {
+    color: #999;
+    background-color: inherit;
+}
+
+main div#extension__manager ul.tabs li.active a {
+    color: #000;
+    background-color: inherit;
+}
+
+main div#extension__manager .panelHeader {
+    width: 100%;
+    background-color: inherit;
+    padding: inherit;
+    margin: 0 0 1rem 0;
+    border: none;
+}
+
+main div#extension__manager .panelHeader p {
+    margin: 0 0 1rem 0;
+}
+
+
+@media only screen and (max-width:600px) {
+    main div#extension__manager section.extension {
+        grid-template-columns: 138px auto 22%;
+    }
+    main div#extension__manager section.extension img.shot {
+        height: 78px;
+        width: auto;
+    }
+    main div#extension__manager section.extension div.main h2 {
+        margin: 0;
+    }
+    main div#extension__manager section.extension div.main h2 strong:after {
+        content: "\a";
+        white-space: pre;
+    }
+    main div#extension__list section.extension div.main {
+        grid-column: 1/span 3;
+        grid-row: 2;
+    }
+    main div#extension__list section.extension div.actions {
+        grid-column: 2/span 2;
+        gap: 0;
+        align-items: normal;
+    }
+    
+    main div#extension__list section.extension div.notices {
+        grid-column: 1/span 3;
+        grid-row: 3;
+    }
+    main div#extension__list section.extension div.details {
+        margin-top: 2rem;
+        grid-row: 4;
+    }
+    main div#extension__list section.extension div.actions div.available {
+        line-height: 1.2;
+        font-size: 0.75rem;
+        margin-bottom: 0;
+        margin-top: -0.95rem;
+    }
 }
